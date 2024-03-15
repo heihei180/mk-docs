@@ -1,27 +1,49 @@
-site_name: GuoNote
+site_name: Guo Note
+
+
 theme:
+  font:
+    text: Roboto Mono
   name: material
   features:
     - navigation.tabs
     - navigation.sections
     - toc.integrate
+    - navigation.path
     - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
     - search.suggest
     - search.highlight
+    - search.share
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-  language: zh
+    - toc.follow
+
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline
-        name: 切换到黑暗模式
-      primary: teal
-      accent: purple
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
     - scheme: slate
       toggle:
-        icon: material/toggle-switch
-        name: switch to light mode
-      primary: teal
-      accent: lime
+        icon: material/brightness-4
+        name: Switch to light mode
+
+
+
+plugins:
+  - tags
+  - search:
+      lang: 
+        - en
+        - zh
+      jieba_dict: dict.txt
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      archive_date_format: yyyy/MM
+      post_readtime_words_per_minute: 300
+      post_readtime: true
