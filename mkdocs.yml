@@ -41,6 +41,7 @@ plugins:
         - en
         - zh
       jieba_dict: dict.txt
+      
   - blog:
       blog_dir: blog
       blog_toc: true
